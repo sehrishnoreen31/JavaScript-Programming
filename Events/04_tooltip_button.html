@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltips</title>
+    <style>
+        button{
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            font-size: 16px;
+            position: relative;
+        }
+        span{
+            padding: 10px;
+        }
+        #submittip{
+            margin-left: 2px;
+            padding: 5px 10px;
+            display: none;      
+        }
+    </style>
+</head>
+<body>
+        <button id="submit">Submit</button><span id="submittip"></span><span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique corporis exercitationem, sequi sit consequatur iste eius autem. Ipsum cupiditate vero, illum, et distinctio minima veritatis exercitationem illo rem, consequatur sunt.</span>
+
+    <script>
+        let submitBtn = document.getElementById('submit');
+
+        function handleSubmitMouseOver(){
+            let submitTip = document.getElementById('submittip');
+            submitTip.style.display = 'inline';
+            submitTip.innerHTML = 'Submit';
+            submitTip.style.backgroundColor = 'gray';
+            submitTip.style.color = 'white';
+            submitTip.style.position = 'absolute';
+            submitTip.style.zIndex = '999';
+        }
+        function handleSubmitMouseOut(){
+            let submitTip = document.getElementById('submittip');
+            submitTip.style.display = 'none';
+        }
+        submitBtn.addEventListener('mouseover', handleSubmitMouseOver);
+        submitBtn.addEventListener('mouseout', handleSubmitMouseOut);
+        
+        
+    </script>
+</body>
+</html>

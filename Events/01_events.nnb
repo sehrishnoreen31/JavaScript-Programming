@@ -1,0 +1,119 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Events in javascript"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "## In HTML"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "html",
+            "source": [
+                "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Events</title>\r\n    <style>\r\n        button{\r\n            background-color: rgb(253, 228, 85);\r\n            color: rgb(0, 0, 0);\r\n            padding: 10px;\r\n            font-size: 20px;\r\n            font-weight: 600;\r\n            border: none;\r\n            &:hover{\r\n                background-color: rgb(247, 213, 21);;\r\n            }\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n    <h1>Click button to change text color</h1>\r\n    <button onclick=\"this.style.color = 'red', this.innerHTML = 'Clicked'\">Click</button>\r\n</body>\r\n</html>"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/html",
+                            "value": [
+                                "<!DOCTYPE html>\r",
+                                "<html lang=\"en\">\r",
+                                "<head>\r",
+                                "    <meta charset=\"UTF-8\">\r",
+                                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r",
+                                "    <title>Events</title>\r",
+                                "    <style>\r",
+                                "        button{\r",
+                                "            background-color: rgb(253, 228, 85);\r",
+                                "            color: rgb(0, 0, 0);\r",
+                                "            padding: 10px;\r",
+                                "            font-size: 20px;\r",
+                                "            font-weight: 600;\r",
+                                "            border: none;\r",
+                                "            &:hover{\r",
+                                "                background-color: rgb(247, 213, 21);;\r",
+                                "            }\r",
+                                "        }\r",
+                                "    </style>\r",
+                                "</head>\r",
+                                "<body>\r",
+                                "    <h1>Click button to change text color</h1>\r",
+                                "    <button onclick=\"this.style.color = 'red', this.innerHTML = 'Clicked'\">Click</button>\r",
+                                "</body>\r",
+                                "</html>"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "## With Javascript"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "html",
+            "source": [
+                "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Events</title>\r\n    <style>\r\n        button{\r\n            background-color: rgb(253, 228, 85);\r\n            color: rgb(0, 0, 0);\r\n            padding: 10px;\r\n            font-size: 20px;\r\n            font-weight: 600;\r\n            border: none;\r\n            &:hover{\r\n                background-color: rgb(247, 213, 21);;\r\n            }\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n    <h1>Click button to change text color</h1>\r\n    <button class=\"btn\" onclick=\"changeColor()\">Click</button>\r\n\r\n    <script>\r\n        function changeColor(){\r\n            let btn = document.querySelector('.btn');\r\n            btn.style.color = 'blue';\r\n            btn.innerHTML = 'Clicked'\r\n        }\r\n        \r\n\r\n    </script>\r\n</body>\r\n</html>"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/html",
+                            "value": [
+                                "<!DOCTYPE html>\r",
+                                "<html lang=\"en\">\r",
+                                "<head>\r",
+                                "    <meta charset=\"UTF-8\">\r",
+                                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r",
+                                "    <title>Events</title>\r",
+                                "    <style>\r",
+                                "        button{\r",
+                                "            background-color: rgb(253, 228, 85);\r",
+                                "            color: rgb(0, 0, 0);\r",
+                                "            padding: 10px;\r",
+                                "            font-size: 20px;\r",
+                                "            font-weight: 600;\r",
+                                "            border: none;\r",
+                                "            &:hover{\r",
+                                "                background-color: rgb(247, 213, 21);;\r",
+                                "            }\r",
+                                "        }\r",
+                                "    </style>\r",
+                                "</head>\r",
+                                "<body>\r",
+                                "    <h1>Click button to change text color</h1>\r",
+                                "    <button class=\"btn\" onclick=\"changeColor()\">Click</button>\r",
+                                "\r",
+                                "    <script>\r",
+                                "        function changeColor(){\r",
+                                "            let btn = document.querySelector('.btn');\r",
+                                "            btn.style.color = 'blue';\r",
+                                "            btn.innerHTML = 'Clicked'\r",
+                                "        }\r",
+                                "        \r",
+                                "\r",
+                                "    </script>\r",
+                                "</body>\r",
+                                "</html>"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
