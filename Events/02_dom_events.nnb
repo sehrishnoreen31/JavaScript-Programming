@@ -1,0 +1,151 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Dom Events"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "## onclick"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "html",
+            "source": [
+                "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n    <button onclick=message()>Submit</button>\r\n    <p class=\"message\"></p>\r\n\r\n    <script>\r\n        function message(){\r\n            let message = document.querySelector('.message');\r\n            message.innerText = 'You clicked the button!'\r\n        }\r\n    </script>\r\n</body>\r\n</html>"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/html",
+                            "value": [
+                                "<!DOCTYPE html>\r",
+                                "<html lang=\"en\">\r",
+                                "<head>\r",
+                                "    <meta charset=\"UTF-8\">\r",
+                                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r",
+                                "    <title>Document</title>\r",
+                                "</head>\r",
+                                "<body>\r",
+                                "    <button onclick=message()>Submit</button>\r",
+                                "    <p class=\"message\"></p>\r",
+                                "\r",
+                                "    <script>\r",
+                                "        function message(){\r",
+                                "            let message = document.querySelector('.message');\r",
+                                "            message.innerText = 'You clicked the button!'\r",
+                                "        }\r",
+                                "    </script>\r",
+                                "</body>\r",
+                                "</html>"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "## ondblclick"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "html",
+            "source": [
+                "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n    <button ondblclick=message()>Submit</button>\r\n    <p class=\"msg\"></p>\r\n\r\n    <script>\r\n        function message(){\r\n            let message = document.querySelector('.msg');\r\n            message.innerText = 'You double clicked the button!'\r\n        }\r\n    </script>\r\n</body>\r\n</html>"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/html",
+                            "value": [
+                                "<!DOCTYPE html>\r",
+                                "<html lang=\"en\">\r",
+                                "<head>\r",
+                                "    <meta charset=\"UTF-8\">\r",
+                                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r",
+                                "    <title>Document</title>\r",
+                                "</head>\r",
+                                "<body>\r",
+                                "    <button ondblclick=message()>Submit</button>\r",
+                                "    <p class=\"msg\"></p>\r",
+                                "\r",
+                                "    <script>\r",
+                                "        function message(){\r",
+                                "            let message = document.querySelector('.msg');\r",
+                                "            message.innerText = 'You double clicked the button!'\r",
+                                "        }\r",
+                                "    </script>\r",
+                                "</body>\r",
+                                "</html>"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "## onkeydown"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "html",
+            "source": [
+                "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Document</title>\r\n    <style>\r\n        input{\r\n            outline: none;\r\n            border-color: transparent;\r\n            color: gray;\r\n            box-shadow: 2px 2px 2px 2px rgba(155, 155, 155, 0.541);\r\n            padding: 5px 10px;\r\n            border-radius: 30px;\r\n            font-size: 16px;\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n    <input onkeydown=\"changeColor()\" type=\"text\" name=\"user\" id=\"user\" placeholder=\"Type here\">\r\n\r\n    <script>\r\n        function changeColor(){\r\n            let text = document.querySelector('#user');\r\n            text.style.backgroundColor = 'black';\r\n            text.style.color = 'white';\r\n        }\r\n    </script>\r\n</body>\r\n</html>"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/html",
+                            "value": [
+                                "<!DOCTYPE html>\r",
+                                "<html lang=\"en\">\r",
+                                "<head>\r",
+                                "    <meta charset=\"UTF-8\">\r",
+                                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r",
+                                "    <title>Document</title>\r",
+                                "    <style>\r",
+                                "        input{\r",
+                                "            outline: none;\r",
+                                "            border-color: transparent;\r",
+                                "            color: gray;\r",
+                                "            box-shadow: 2px 2px 2px 2px rgba(155, 155, 155, 0.541);\r",
+                                "            padding: 5px 10px;\r",
+                                "            border-radius: 30px;\r",
+                                "            font-size: 16px;\r",
+                                "        }\r",
+                                "    </style>\r",
+                                "</head>\r",
+                                "<body>\r",
+                                "    <input onkeydown=\"changeColor()\" type=\"text\" name=\"user\" id=\"user\" placeholder=\"Type here\">\r",
+                                "\r",
+                                "    <script>\r",
+                                "        function changeColor(){\r",
+                                "            let text = document.querySelector('#user');\r",
+                                "            text.style.backgroundColor = 'black';\r",
+                                "            text.style.color = 'white';\r",
+                                "        }\r",
+                                "    </script>\r",
+                                "</body>\r",
+                                "</html>"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
