@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(224, 224, 224, 0.349);
+    box-shadow: 2px 3px 2px 3px rgba(224, 224, 224, 0.637);
+}
+
+h1{
+    color: rgb(136, 14, 136);
+    padding: 10px;
+    &:hover{
+        color: rgb(199, 25, 121);
+    }
+}
+
+p {
+    color: rgb(138, 15, 77);
+    padding: 10px;
+    font-size: 18px;
+}
+
+.user{
+    color:rgb(255, 0, 140);
+    font-weight: 600;
+    padding: 10px;
+}
+
+.followers{
+    color: rgb(27, 61, 214);
+    font-weight: 600;
+    padding: 10px;
+}
+
+h3{
+    color: rgb(138, 15, 77);
+    padding: 10px;
+}
+
+.btn-primary{
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(199, 25, 121);
+    outline: none;
+    border: transparent;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(138, 15, 77);
+        scale: 1.03;
+    }
+}
+
+.btn-secondary{
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(22, 7, 107);
+    outline: none;
+    border: transparent;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(13, 3, 70);
+        scale: 1.03;
+    }
+}
