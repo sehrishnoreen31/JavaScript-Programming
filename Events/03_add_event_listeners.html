@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <style>
+        button{
+            background-color: purple;
+            color: white;
+            padding: 5px 10px;
+            font-size: 18px;
+            border-color: transparent;
+        }
+    
+    </style>
+</head>
+<body>
+    <button id="btn">Submit</button>
+
+    <script>
+        let btn = document.getElementById('btn');
+
+        function handleClick(){
+            btn.innerText = 'Button Clicked';
+        }
+        btn.addEventListener('click', handleClick);
+
+        function changeColor(){
+            btn.style.backgroundColor = 'red';
+            btn.style.color = 'black';
+        }
+        btn.addEventListener('mouseover', changeColor);
+
+        function changeTextColor(){
+            btn.style.color = 'white';
+            btn.style.backgroundColor = 'purple';
+        }
+        btn.addEventListener('mouseout', changeTextColor);
+    </script>
+</body>
+</html>
