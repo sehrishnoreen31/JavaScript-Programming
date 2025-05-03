@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            padding: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgb(255, 194, 103);
+        }
+        label{
+            text-align: left;
+            align-items: left;
+            padding: 5px 0;
+            display: block;
+            font-size: 16px;
+        }
+
+        input{
+            display: block;
+            border-color: transparent;
+            outline: none;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+        button{
+            padding: 5px 10px;
+            margin: 10px 0;
+            background-color: rgb(252, 114, 51);
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            outline: none;
+            border-color: transparent;
+            &:hover{
+                background-color: rgb(207, 199, 199);
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Fill The Form</h1>
+    <main>
+        <div class="container">
+            <!-- user input -->
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="number" name="phone" id="phone" maxlength="11" minlength="11" required>
+
+            <button id="submit-btn">Submit</button>
+
+            <!-- display info -->
+            <div id="user-info" style="display: none;">
+                <h2>Your Information</h2>
+                <p id="user-name"></p>
+                <p id="user-email"></p>
+                <p id="user-phone"></p>
+            </div>
+        </div>
+        
+    </main>
+
+    <script>
+        function submitFeedback(){
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+
+            if (name && email && phone){
+                alert('Thanks for submitting form!');
+                document.getElementById('user-name').innerHTML = name;
+                document.getElementById('user-email').innerHTML = email;
+                document.getElementById('user-phone').innerHTML = phone;
+                document.getElementById('user-info').style.display = 'block';
+            }
+            else {
+                alert('Fill all fields!');
+            }
+        }
+
+        // event listener for submit button
+        const submitBtn = document.getElementById('submit-btn');
+        submitBtn.onclick = submitFeedback;
+
+        // event listener for enter button
+        document.addEventListener('keydown', function(event){
+            if (event.key === 'Enter'){
+                submitFeedback();
+            }
+        });
+        
+     </script>
+</body>
+</html>
